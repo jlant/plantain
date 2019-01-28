@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+
+{% block title %}Plantain | QA - WSC{% endblock %}
+
+{% block content %}
+<main>
+  <div class="container pt-5">
+    <div class="row pt-5">
+      <!-- sidebar -->
+      <div class="col-sm-3">
+        <nav id="toc" data-toggle="toc" class="sticky-top">
+          <h5 class="text-muted">Table of Contents</h5>
+        </nav>
+      </div>
+      <!-- main content -->
+      <div class="col-sm-9">
+        <div class="alert alert-warning" role="alert">
+        Last modified on {{ data.timestamp.strftime('%Y-%m-%d %H:%M:%S') }} by {{ user.username }}
+        </div>
+        <h1 class="page-header" id="table-of-contents-plugin-for-bootstrap">
+          {{ user.wsc }} Water Science Center Surface Water Quality Assurance Plan
+        </h1>
+        <h2>Abstract</h2>
+        <p>
+        This Surface-Water Quality-Assurance Plan documents the standards,
+        policies, and procedures used by the U.S. Geological Survey (USGS) <mark
+        class="bg-warning">{{ user.wsc }}</mark> Water Science Center (WSC) for
+        activites related to the collection, analysis/processing, storage, and
+        publication of surface-water data.  Surface-water data include measurements of
+        gage height, velocity, streamflow, suspended-sediment concentration and load,
+        and precipiation.
+        </p>
+        <h2>Introduction</h2>
+        <p>
+        The USGS was established by an act of Congress on March 3, 1879, to provide a
+        permanent Federal agency to perform the systematic and scientific "classification of the
+        public lands, and examination of the geologic structure, mineral resources, and products
+        of the national domain." Surface-water data collection and analysis activities in the USGS
+        are part of the overall mission of appraising the Nation's water resources. Surface-water
+        information, including stage, streamflow, precipitation, suspended-sediment concentration
+        and load data, and basin characteristics are used at the Federal, State, and local levels
+        for resources planning and management.
+        </p>
+        <p>
+        The purpose of this Surface-Water Quality-Assurance Plan (QA Plan) is to
+        document USGS and <mark class="bg-warning">{{ user.wsc }}</mark> WSC standards, policies,
+        and procedures for activities related to the collection, processing, storage, analysis,
+        and publication of surface-water data.  The QA Plan reflects minimum National standards
+        that must be applied consistently across the country as well as higher standards or
+        additional operational guidelines needed to address hydrologic conditions and data
+        operations unique to the <mark class="bg-warning">{{ user.wsc }}</mark> WSC.  Elements of
+        the USGS Water Mission Area (WMA) will review the plan periodically to ensure policies and
+        methodologies are kept current.  WSC staff with assigned responsibility will review and
+        revise this QA Plan at least once/year to ensure that the plan remains consistent with WSC
+        assigned responsibilities, operational plans, or additional standards as necessary
+        according to the unique staffing and hydrologic conditions of the <mark
+        class="bg-warning">{{ user.wsc }}</mark> WSC.
+        </p>
+        <p>
+        This plan outlines most required policies and procedures attendant to surface water data
+        programs and identifies personnel responsible for ensuring they are carried out. The plan
+        also serves as a resource for identifying memorandums, publications, and other literature
+        that describe in more detail associated techniques and requirements. There is some
+        redundancy in this report in an attempt to make certain the content of each section stands
+        alone as complete.
+        </p>
+        <p>
+        The scope of this plan includes discussions of the policies and procedures followed by the
+        USGS for the collection, processing, analysis, storage, and publication of surface-water
+        data. Specific types of surface-water data include stage, velocity, streamflow,
+        suspended-sediment concentration and load, precipitation, and basin characteristics. In
+        addition, issues related to the management of the computer database, employee safety, and
+        technical training are presented.
+        </p>
+        <p>
+        The water-resource science and monitoring activities of the USGS generally are housed in
+        the USGS WMA. In the past, the WMA was known as the Water Resources Division and Water
+        Resources Discipline, both of which used the abbreviation “WRD”.  Many currently valid
+        historical references/citations for policies and publications used in this Plan will still
+        contain the WRD acronym.
+        </p>
+        <p>
+        At the time of this writing the WMA is undergoing a significant reorganization that
+        includes the dissolution of the Office of Surface Water (OSW) and an independent Water
+        Science Field Team (WSFT) that has historically provided the WMA focus on quality
+        assurance of surface-water activities.  The new organization will feature a new Office of
+        Quality Assurance (OQA) and five divisions that will focus on observations, laboratories,
+        Earth science, modeling and prediction, and data dissemination and visualization.  WMA
+        quality assurance functions will be coordinated by the new OQA with responsibility for
+        technical support and guidance and technical review vested in various branches of these
+        divisions.  As a result, this document is expected to evolve as the new organization takes
+        shape, lines of authorities and linkages are established, and experience is gained.
+        </p>
+        <h2>Responsibilites</h2>
+        <p>
+        Quality assurance (QA) is an active process. Achieving and maintaining high-quality
+        standards for surface-water data are accomplished by specific actions carried out by
+        specific individuals. Errors and deficiencies can occur when individuals fail to carry out
+        their responsibilities. Clear and specific statements of responsibilities promote an
+        understanding of each person's duties in the overall process of assuring surface-water
+        data quality.
+        </p>
+        <p>
+        Responsibilities are assigned to employees by position title. The responsibility
+        for the preparation of, implementation of, and adherence to the QA policies described in
+        the QA Plan is with the Director of the <mark class="bg-warning">{{ user.wsc }}</mark>
+        WSC. Project Chiefs involved in the collection of surface water data are required to
+        follow the procedures herein or prepare a separate QA plan as part of their proposal.  
+        </p>
+        <p>
+        <mark class="bg-warning">{{ data.responsibilities }}</mark>
+        </p>
+        <h2>Safety</h2>
+        <p>
+        Performing work activities in a manner that ensures the safety of personnel and
+        others is of the highest priority for the USGS.  Beyond the obvious negative impact unsafe
+        conditions can have on personnel, such as accidents and personal injuries, they also can
+        have a direct effect on the quality of surface-water data and data analysis.  For example,
+        errors may be made when an individual’s attention to detail is compromised by dangerous
+        conditions that create distractions or when necessary tasks and maintenance are neglected
+        because of those dangerous conditions.  WMA policy memorandums related to safety are
+        located at <a
+        href="https://water.usgs.gov/admin/memo/policy/wrdpolicy99.32.html">https://water.usgs.gov/admin/memo/policy/wrdpolicy99.32.html</a>.
+        </p>
+        <p>
+        <mark class="bg-warning">{{ data.safety }}</mark>
+        </p>
+        <h2>Collection of Stage, Velocity and Streamflow Data</h2>
+        <h3>Streamgage Installation and Maintanence</h3>
+        <p>
+        Proper installation and maintenance of gaging stations are critical activities for
+        ensuring quality in streamflow-data collection and analysis. Effective site selection,
+        correct design and construction, and regular maintenance of a gage can make the difference
+        between complete records and efficient and accurate determination of streamflow data or
+        missing records and time-consuming, poor quality estimations of streamflow data.
+        </p>
+        <p>
+        Sites for installation of gaging stations are selected with the intent to meet the purpose
+        of each specific gage. Additionally, sites are selected with the intent of achieving, to
+        the greatest extent possible, ideal hydraulic conditions. Criteria that describe the ideal
+        gaging-station site are listed in <a href="https://pubs.usgs.gov/wsp/wsp2175/">Rantz and
+        others (1982, p. 5)</a>. These criteria include unchanging natural controls that promote a
+        stable stage-discharge relation, a nearby satisfactory reach for measuring discharge
+        throughout the range of stage, and the means for efficient access to the gage and
+        measuring location. Other aspects of gage installation and maintenance, including stilling
+        wells and pressure transducers, are discussed in <a
+        href="https://pubs.usgs.gov/tm/tm3-a7/pdf/tm3-a7.pdf">Sauer and Turnipseed (2010)</a>.
+        All gage heights above the arbitrary gage datum should be referenced to an established
+        datum, such as  North American Vertical Datum of 1988 (NAVD88).  Methods for establishing
+        a common datum are described in <a href="https://pubs.usgs.gov/tm/11d1/">Rydlund and
+        Densmore (2012)</a>.  Office of Water Information (OWI) Technical Memorandum 2002.01
+        recommends NAVD88 be the datum used for USGS gaging stations. 
+        </p>
+        <h4 class="text-muted">Discontinued Gages</h4>
+        <p>
+        Gaging stations may be discontinued due to funding shortfalls or the completion
+        of site-specific studies or data collection. When this occurs, it is the responsibility of
+        the affected office to notify the cooperating agency. At that time, all data acquisition
+        is to cease and the responsible party shall be notified of the gage’s status so that the
+        National Water Information System (NWIS) can be updated. The USGS tracks and reports
+        threatened and endangered streamgage to highlight the loss of every streamgage and the
+        ongoing general need for funding support for the network (URL: <a
+        href="https://water.usgs.gov/networks/fundingstability/GuidanceDocs/UpdatingTEDRS.pdf">https://water.usgs.gov/networks/fundingstability/GuidanceDocs/UpdatingTEDRS.pdf</a>).
+        In addition, for real-time stations, information shall be posted on the discontinued
+        gage’s NWISWeb page notifying the public why the gage has been discontinued and to provide
+        contact information for parties interested in reactivating the gage. 
+        </p>
+        <p>
+        Any discontinued gaging stations must be documented annually in the Discontinued Stations
+        Capital Improvement (DS-CI) database. (<a
+        href="https://water.usgs.gov/admin/memo/policy/wrdpolicy09.02.pdf">WRD Policy Memorandum
+        09.02</a>). OSW Technical Memorandum 2016.06 establishes a process to support the
+        allocation of DOI facilities funding to facilitate the safe removal of discontinued
+        stations and remove/replace some cableways or other “attractive nuisances” in certain
+        situations. WSCs must submit annual requests for DS-CI funding via the online form listed
+        in the Application Process described in OSW Technical Memorandum 2016.06. Requests are
+        evaluated and funded monthly until the annual funds are expended. 
+        </p>
+        <p>
+        <mark class="bg-warning">{{ data.stream_install }}</mark>
+        </p>
+        <h3>Site Documentation</h3>
+        <h4 class="text-muted">Station Descriptions</h4>
+        <p>
+        A station description is prepared for each gaging station and becomes part of the
+        permanent record.  Station descriptions are written to include specific types of
+        information in a consistent format as illustrated by <a
+        href="https://pubs.usgs.gov/twri/twri3-a13/">Kennedy (1983, p. 2)</a>. The goal of a
+        well-written station description is to provide an archive of knowledge that has been
+        gained regarding a particular gaging station over time. A critical component of the
+        station description is to clearly identify the primary reference gage; multiple reference
+        gages may be necessary if the range of stage and site conditions dictate it.  The range of
+        stage covered by each gage should be provided. 
+        </p>
+        <p>
+        Station descriptions should describe the hydraulic control and its sensitivity and
+        stability at various flow and water levels.  Key information includes the gage height of
+        zero flow and the control cross-section breakpoints and transition zones.  Station
+        descriptions should also describe the measurement locations, approximate safe wading
+        depth, and list special equipment that may be needed to safely access and measure the
+        stream at various flows.
+        </p>
+        <p>
+        <mark class="bg-warning">{{ data.station_desc }}</mark>
+        </p>
+        <h4 class="text-muted">Photos and Videos</h4>
+        <p>
+        Photographs and videos are taken by the hydrographers for the purpose of documenting
+        gage-house construction, changes in control conditions, floods, damage to gage features,
+        or to supplement various forms of written documentation such as station descriptions.
+        Detailed documentation of site conditions with photographs or videos are also an important
+        part of theoretically-based analyses such as indirect measurement computations, flow
+        computations that use surface-velocity observations, and step-backwater studies.
+        Hydrographers should have access to mobile devices with photo/video capability and have
+        them readily available when servicing gages. Photographs can be attached to a specific
+        site visit in the Field Data Editor of AQUARIUS. 
+        </p>
+        <p>
+        <mark class="bg-warning">{{ data.station_photos }}</mark>
+        </p>
+        <p></p>
+      </div>
+    </div>
+  <div> 
+</main>
+{% endblock %}

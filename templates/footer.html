@@ -1,0 +1,25 @@
+<footer class="footer pt-3 my-md-3 pt-md-3">
+  <div class="container border-top">
+    <div class="row">
+      <div class="col-md-5 text-left">
+        <a href="https://www.usgs.gov/" title="USGS" target="_blank">
+          <img class="usgs-logo" src="{{ url_for('static', filename='img/usgs.png') }}" alt="USGS" >
+        </a>
+      </div>
+      <div class="col-md-2 text-center">
+        <span class="social-media-span">
+          <a href="https://github.com/jlant" target="_blank">
+            <i class="fa fa-2x fa-github"></i>
+          </a>
+        </span>
+      </div>
+      <div class="col-md-5 text-right" >
+        <span class="">
+          <a class="text-muted mr-3" href="{{ url_for('about') }}">About</a>
+          <a class="text-muted" href="{{ url_for('contact') }}">Contact</a>
+        </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

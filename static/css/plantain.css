@@ -1,0 +1,112 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.jumbotron {
+  background-image: linear-gradient(green, yellow);
+}
+
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+.navbar-nav > li {
+  float: left;
+  position: relative;
+}
+
+/* White underline below navbar links
+.navbar-dark .navbar-nav .active a::after {
+  border-bottom: 1px solid #ffffff;
+  bottom: 5px;
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+*/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px; /* Vertically center the text */
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.plantain-img-main {
+  width: 100px;
+  height: 100px;
+}
+
+.plantain-img-nav {
+  width: 30px;
+  height: 30px;
+}
+
+.file-img {
+  width: 150px;
+  height: 200px;
+}
+
+.usgs-logo {
+  width: 108px; /* width:height ratio ~2.7 */
+  height: 40px;
+  opacity: 0.5;
+  display: inline-block;
+  margin: 0 3px 0 3px;
+}
+
+.social-media-span a {
+  display: inline-block;
+  color: #aaa;
+}
+
+.link-span a {
+  display: inline-block;
+  margin: 5px 5px 0 5px;
+}
+
+
+/* table of contents */
+nav[data-toggle='toc'] {
+  top: 60px;
+}
+
+/* table of contents - small screens */
+@media (max-width: 768px) {
+  /* override stickyness so that the navigation does not follow scrolling */
+  nav[data-toggle='toc'] {
+    margin-bottom: 42px;
+    position: static;
+  }
+
+  /* PICK ONE */
+  /* don't expand nested items, which pushes down the rest of the page when navigating */
+  nav[data-toggle='toc'] .nav .active .nav {
+    display: none;
+  }
+  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
+  /*
+  nav[data-toggle='toc'] .nav .nav {
+    display: block;
+  }
+  */
+}
+
+/* gray - #202020 */
+/* green - #28a745 */
+nav[data-toggle='toc'] .nav > li > a:hover,
+nav[data-toggle='toc'] .nav > li > a:focus {
+  color: #28a745;
+  border-left: 1px solid #28a745;
+}
+nav[data-toggle='toc'] .nav-link.active,
+nav[data-toggle='toc'] .nav-link.active:hover,
+nav[data-toggle='toc'] .nav-link.active:focus {
+  color: #28a745;
+  border-left: 2px solid #28a745;
+}

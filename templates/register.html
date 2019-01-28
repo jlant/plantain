@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% from "_macros.html" import render_field, render_select_field %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<main>
+  <div class="container pt-5">
+    <!-- Register Form -->
+    <div class="bg-light w-50 m-5 p-5 mx-auto border">
+      <img class="plantain-img-main mx-auto d-block" src="{{ url_for('static', filename='img/plantain.png') }}" alt="plantain"/>
+      <h2 class="text-center m-3">Create an Account</h2>
+      <form class="" method="POST" action="" novalidate>    
+        {{ form.csrf_token }}
+        {{ render_field(form.email, placeholder=form.email.label.text) }} 
+        {{ render_field(form.password, placeholder=form.password.label.text) }} 
+        {{ render_select_field(form.wsc) }} 
+        <button type="submit" class="btn btn-success">Create an account</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

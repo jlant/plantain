@@ -1,0 +1,54 @@
+<header>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img class="plantain-img-nav d-inline-block align-top rounded" src="{{ url_for('static', filename='img/plantain.png') }}" alt="plantain"/>
+        Plantain
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mr-auto" id="navbarList">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('explore') }}">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('resources') }}">Resources</a>
+          </li>
+          {% if current_user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('qaform') }}">QAP Master Template</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('qaresults') }}">QAP WSC</a>
+          </li>
+          {% endif %}
+        </ul>
+        
+        {% if current_user.is_authenticated %}
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="userInfo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded=false>{{ current_user.username }}</a>
+              <div class="dropdown-menu" aria-labelby="userInfo">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#">Plans</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{{ url_for('logout') }}" aria-disabled="true">Log Out</a>
+              </div>
+            </li>
+          </ul>
+        {% else %}
+          <a href="{{ url_for('login') }}" class="btn btn-outline-success m-2 my-sm-0" role="button" aria-disabled="true">Log In</a>
+          <a href="{{ url_for('register') }}" class="btn btn-outline-success my-2 my-sm-0" role="button" aria-disabled="true">Create Account</a>
+        {% endif %}
+
+      </div>
+    </div>
+  </nav><!-- /navbar -->
+</header>

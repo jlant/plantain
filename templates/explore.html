@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Explore{% endblock %}
+
+{% block content %}
+<main>
+  <div class="container">
+    <!-- Explore -->
+    <h1 class="text-center my-5 pt-5">Explore Plans</h1>
+    <div class="input-group py-3">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      <span class="input-group-btn">
+        <button class="btn btn-outline-success" type="button">Search</button>
+      </span>
+    </div>
+    <ul class="list-group my-3">
+      <li class="list-group-item">
+        <div class="d-flex justify-content-between">
+          <h5 class="mb-1">National Quality Assurance Plan</h5>
+          <span class="badge badge-pill badge-success p-2">Finished</span>
+        </div>
+        <p class="text-muted mb-1">Office of Quality Assurance</p>
+        <p class="text-muted mb-1">2018-09-01</p>
+      </li>
+      <li class="list-group-item">
+        <div class="d-flex justify-content-between">
+          <h5 class="mb-1">Quality Assurance Plan</h5>
+          <span class="badge badge-pill badge-warning p-2">Started</span>
+        </div>
+        <p class="text-muted mb-1">Ohio-Kentucky-Indiana Quality Assurance Plan</p>
+        <p class="text-muted mb-1">2018-09-14</p>
+      </li>
+      <li class="list-group-item">
+        <div class="d-flex justify-content-between">
+          <h5 class="mb-1">Quality Assurance Plan</h5>
+          <span class="badge badge-pill badge-danger p-2">Not Started</span>
+        </div>
+        <p class="text-muted mb-1">Ohio-Kentucky-Indiana Data Management Plan</p>
+        <p class="text-muted mb-1">2018-10-01</p>
+      </li>
+    </ul><!-- /explore -->
+
+  </div>
+</main>
+    
+{% endblock %}

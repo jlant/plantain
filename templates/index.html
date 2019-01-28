@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<main>
+  <!-- jumbotron -->
+  <div class="jumbotron text-center" id="jumbo-grad">
+    <div class="container mt-5">
+      <img class="plantain-img-main" src="{{ url_for('static', filename='img/plantain.png') }}" alt="plantain"/>
+      <h1 class="display-2 text-white">Plantain</h1>
+      <p class="lead text-white">Maintain your science plans easily and efficiently.</p> 
+    </div>
+  </div><!-- /jumbotron -->
+
+  <!-- description -->
+  <div class="container py-3">
+    <h3 class="text-left"><strong>Plantain builds science plans by combining national templates with user specific content.</strong></h3>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="lead text-muted">Plantain uses approved USGS national data plans as templates. Users can add specific content that gets merged with the national plan of interest. This allows users to focus more time and energy writing their specific content additions instead of on the plan in its entirety.</p>
+      </div>
+      <div class="col-md-6">
+        <p class="lead text-muted">Plantain uses various national data plans, such as the USGS Quality Assurance Plan and the Data Mangagement Plan. Users can also view other users plans for reference and comparison.</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row py-3">
+      <div class="col-md-6 text-center">
+        <img class="file-img" src="{{ url_for('static', filename='img/national.png') }}"  alt="national">
+        <!-- <i class="fa fa-5x fa-wpforms"></i> -->
+      </div>
+      <div class="col-md-6">
+        <h2>View National Plans</h2>
+        <p class="text-muted">Plantain has various templated national plans that can be viewed including the USGS quality assurance plan and data managment plan.</p>
+      </div>
+    </div>
+
+    <div class="row py-3">
+      <div class="col-md-6 text-center">
+        <img class="file-img" src="{{ url_for('static', filename='img/form.png') }}" alt="national">
+      </div>
+      <div class="col-md-6">
+        <h2>Add Specific Content</h2>
+        <p class="text-muted">Users fill out forms to add specific content to a national template plan of interest.</p>
+      </div>
+    </div>
+
+    <div class="row py-3">
+      <div class="col-md-6 text-center">
+        <img class="file-img" src="{{ url_for('static', filename='img/merged.png') }}" width="150" height="200" alt="national">
+      </div>
+      <div class="col-md-6">
+        <h2>Merge specific content with national</h2>
+        <p class="text-muted">Plantain merges user specific content into the appropriate location within the national plan.</p>
+      </div>
+    </div>
+  </div><!-- /description -->
+</main>
+{% endblock %}
+

@@ -1,0 +1,27 @@
+{% macro render_field(field) %}
+<div class="form-group">
+  <label for="{{ field.name }}">{{ field.label.text }}</label>
+  {% if field.errors %}
+    {{ field(class_='form-control is-invalid', **kwargs)|safe }}
+    {% for error in field.errors %}
+      <small style="color:red;">{{ error }}</small>
+    {% endfor %}
+  {% else %}
+    {{ field(class_='form-control', **kwargs)|safe }}
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro render_select_field(field) %}
+<div class="form-group">
+  <label for="{{ field.name }}">{{ field.label.text }}</label>
+  {% if field.errors %}
+    {{ field(class_='custom-select is-invalid', **kwargs)|safe }}
+    {% for error in field.errors %}
+      <small style="color:red;">{{ error }}</small>
+    {% endfor %}
+  {% else %}
+    {{ field(class_='custom-select', **kwargs)|safe }}
+  {% endif %}
+</div>
+{% endmacro %}
