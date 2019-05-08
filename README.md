@@ -22,17 +22,17 @@ $ python app.py
 ```
 
 ### Requirements
-python>=3.6.1
-click==6.7
-Flask==0.12.2
-Flask-Bcrypt==0.7.1
-Flask-Cors==3.0.2
-Flask-Login==0.4.1
-Flask-WTF==0.14.2
-Jinja2==2.9.6
-peewee==3.7.1
-Werkzeug==0.12.2
-WTForms==2.2.1
+python>=3.6.1  
+click==6.7  
+Flask==0.12.2  
+Flask-Bcrypt==0.7.1  
+Flask-Cors==3.0.2  
+Flask-Login==0.4.1  
+Flask-WTF==0.14.2  
+Jinja2==2.9.6  
+peewee==3.7.1  
+Werkzeug==0.12.2  
+WTForms==2.2.1  
 
 ### License
 
