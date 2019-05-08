@@ -7,7 +7,7 @@ builds science plans by combining national templates with user specific content.
 
 ### Features
 
-* View various templated national plans that can be viewed including the USGS quality assurance plan and data managment plan.
+* View various templated national plans that can be viewed including the USGS quality assurance plan and data management plan.
 * Users fill out forms to add specific content to a national template plan of interest.
 * Automatic merging of user specific content into the appropriate location within the national plan.
 
